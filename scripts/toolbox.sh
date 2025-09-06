@@ -5,4 +5,4 @@
 
 # Update the container and install packages
 pacman -Syu
-grep -v '^#' ./toolbox.packages | xargs pacman -S --no-confirm
+grep -v '^#' ./toolbox.packages | xargs pacman -S --noconfirm
