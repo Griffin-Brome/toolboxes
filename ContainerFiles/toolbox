@@ -1,0 +1,15 @@
+# vi: ft=dockerfile
+FROM ghcr.io/ublue-os/arch-toolbox:latest
+
+LABEL com.github.containers.toolbox="true" \
+      usage="This image is meant to be used with the toolbox or distrobox command" \
+      summary="Pre-configured Arch toolbox"
+
+# Copy the setup scripts and package list
+COPY ../scripts/toolbox.sh /
+COPY ../scripts/distrobox-shims.sh /
+COPY ../packages/toolbox.packages /
+
+# Run the setup scripts
+RUN chmod +x toolbox.sh distrobox-shims.sh && /toolbox.sh
+RUN rm /toolbox.sh /distrobox-shims.sh /toolbox.packages
