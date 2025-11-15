@@ -1,4 +1,3 @@
-# vi: ft=dockerfile
 FROM ghcr.io/ublue-os/arch-toolbox:latest
 
 LABEL com.github.containers.toolbox="true" \
@@ -13,3 +12,6 @@ COPY ../packages/toolbox.packages /
 # Run the setup scripts
 RUN chmod +x toolbox.sh distrobox-shims.sh && /toolbox.sh
 RUN rm /toolbox.sh /distrobox-shims.sh /toolbox.packages
+
+# The pacman package installs the binary as `helix`.
+RUN ln -s /usr/bin/helix /usr/bin/hx

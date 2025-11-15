@@ -2,10 +2,11 @@ bat
 chezmoi
 direnv
 fastfetch
+fd
 fzf
 github-cli
+helix
 just
-neovim
 ripgrep
 starship
 wl-clipboard
