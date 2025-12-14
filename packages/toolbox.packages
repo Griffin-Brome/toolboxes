@@ -3,6 +3,7 @@ chezmoi
 direnv
 fastfetch
 fd
+fish
 fzf
 github-cli
 helix
@@ -10,5 +11,3 @@ just
 ripgrep
 starship
 wl-clipboard
-zellij
-zsh
