@@ -9,5 +9,7 @@ github-cli
 helix
 just
 ripgrep
+rustup
 starship
+uv
 wl-clipboard
