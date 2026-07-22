@@ -15,3 +15,7 @@ RUN rm /toolbox.sh /distrobox-shims.sh /toolbox.packages
 
 # The pacman package installs the binary as `helix`.
 RUN ln -s /usr/bin/helix /usr/bin/hx
+
+RUN wget https://github.com/digitalocean/doctl/releases/download/v1.163.0/doctl-1.163.0-linux-amd64.tar.gz
+RUN tar xzf doctl-1.163.0-linux-amd64.tar.gz
+RUN mv doctl /usr/local/bin/
